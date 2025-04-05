@@ -27,12 +27,12 @@ const implementations = [
 
 export default function ImplementationSection() {
   return (
-    <section id="implementation" className="py-24 bg-gray-50">
+    <section id="implementation" className="py-24 bg-blue-900/30 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Implementace AI do firem</h2>
-            <p className="mt-4 text-lg text-gray-600">
+            <h2 className="text-3xl md:text-4xl font-bold text-white">Implementace AI do firem</h2>
+            <p className="mt-4 text-lg text-blue-100">
               Ukážeme vám, jak AI může transformovat vaše podnikání. Od automatizace rutinních úkolů po sofistikovanou
               analýzu dat, pomůžeme vám využít potenciál umělé inteligence na maximum.
             </p>
@@ -41,13 +41,15 @@ export default function ImplementationSection() {
               {implementations.map((item, index) => (
                 <div key={index} className="flex gap-4">
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <item.icon className="h-6 w-6 text-primary" />
+                    <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center glow-bg transition-all duration-300">
+                      <item.icon className="h-6 w-6 text-blue-400 glow-effect" />
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
-                    <p className="mt-2 text-gray-600">{item.description}</p>
+                    <h3 className="text-xl font-semibold text-blue-100 glow-text transition-all duration-300">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-gray-300">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -56,17 +58,17 @@ export default function ImplementationSection() {
 
           <div className="mt-12 lg:mt-0">
             <div className="relative">
-              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
+              <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl bg-black/30 backdrop-blur-sm p-4 glow-border transition-all duration-300">
                 <img
                   src="/placeholder.svg?height=600&width=800"
                   alt="AI implementace v praxi"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-lg glow-effect-strong"
                 />
               </div>
 
               {/* Decorative elements */}
-              <div className="absolute -bottom-6 -left-6 w-64 h-64 bg-primary/5 rounded-full -z-10"></div>
-              <div className="absolute -top-6 -right-6 w-48 h-48 bg-secondary/5 rounded-full -z-10"></div>
+              <div className="absolute -bottom-6 -left-6 w-64 h-64 bg-blue-500/5 rounded-full -z-10"></div>
+              <div className="absolute -top-6 -right-6 w-48 h-48 bg-blue-300/5 rounded-full -z-10"></div>
             </div>
           </div>
         </div>

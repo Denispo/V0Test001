@@ -41,11 +41,11 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-24 bg-white">
+    <section id="services" className="py-24 bg-black/40 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Naše služby</h2>
-          <p className="mt-4 text-xl text-gray-600">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">Naše služby</h2>
+          <p className="mt-4 text-xl text-blue-100">
             Komplexní portfolio služeb pro implementaci umělé inteligence do vaší firmy
           </p>
         </div>
@@ -54,16 +54,18 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="border border-gray-200 transition-all duration-300 hover:shadow-lg hover:border-primary/20"
+              className="border-0 bg-black/50 backdrop-blur-md text-white hover:bg-black/60 transition-all duration-300 glow-border"
             >
               <CardHeader className="pb-2">
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <service.icon className="h-6 w-6 text-primary" />
+                <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center mb-4 glow-bg transition-all duration-300">
+                  <service.icon className="h-6 w-6 text-blue-400 glow-effect" />
                 </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
+                <CardTitle className="text-xl text-blue-100 glow-text transition-all duration-300">
+                  {service.title}
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <CardDescription className="text-gray-600 text-base">{service.description}</CardDescription>
+                <CardDescription className="text-gray-300 text-base">{service.description}</CardDescription>
               </CardContent>
             </Card>
           ))}

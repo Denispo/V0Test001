@@ -75,7 +75,25 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    // Plugin pro vlastní scrollbar
+    ({ addUtilities }) => {
+      const newUtilities = {
+        ".scrollbar-thin": {
+          scrollbarWidth: "thin",
+          scrollbarColor: "rgba(59, 130, 246, 0.3) transparent",
+        },
+        ".scrollbar-thumb-blue-900": {
+          scrollbarColor: "rgba(59, 130, 246, 0.3) transparent",
+        },
+        ".scrollbar-track-transparent": {
+          scrollbarColor: "rgba(59, 130, 246, 0.3) transparent",
+        },
+      }
+      addUtilities(newUtilities)
+    },
+  ],
 } satisfies Config
 
 export default config
